@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="showRoom" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Store</title>
+	
+  <!-- Styles	-->
+	<link rel="stylesheet/less" href="lib/bootstrap/less/bootstrap.less">
+	<link rel="stylesheet/less" href="style.less">
+	
+  <!-- Scripts -->
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+	<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Angular library -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <!-- Angular russian locale -->
+	<script type="text/javascript" src="lib/angular-i18n/angular-locale_ru-ru.js"></script>
+  <!-- Less front-end compier -->
+	<script type="text/javascript" src="lib/less/dist/less.min.js"></script>
+  <!-- Angular app -->
+	<script type="text/javascript" src="app/app.js"></script>
+  <!-- Bucket module for the app -->
+  <script type="text/javascript" src="app/store-bucket.js"></script>
+	
+</head>
+<body>
+	<div class="page-header">
+	  <h1>Магаз деревяшек для хипстеров</h1>
+	</div>
+	<div ng-controller="StoreController as store" class="container-fluid">
+		<div ng-repeat="product in store.products" class="row">
+		  <div class="col-sm-6 col-md-6 col-md-offset-3">
+			  <div ng-controller="GalleryController as gallery" class="thumbnail">
+
+          <img ng-src="{{ product.images[gallery.current].full }}"/>
+
+          <div class="row">
+            <div ng-repeat="image in product.images" class="col-xs-6 col-md-3">
+              <a href="" class="thumbnail">
+                <img ng-src="{{ image.full }}" ng-click="gallery.setCurrent(image.index)" class="img-responsive">
+              </a>
+            </div>
+          </div>
+
+          <section ng-controller="PanelController as panel">
+            <ul class="nav nav-pills">
+              <li ng-click="panel.selectTab(1)" ng-class="{ active:panel.isSelected(1) }" role="presentation"><a href="">Описание</a></li>
+              <li ng-click="panel.selectTab(2)" ng-class="{ active:panel.isSelected(2) }" role="presentation"><a href="">Характеристики</a></li>
+              <li ng-click="panel.selectTab(3)" ng-class="{ active:panel.isSelected(3) }" role="presentation"><a href="">Отзывы</a></li>
+            </ul>
+
+            <div class="panel panel-default" ng-show="panel.isSelected(1)">				  
+              <div class="panel-body">
+                <strong>{{ product.name }} {{ product.price | currency }}</strong>
+                {{ product.description }}
+              </div>
+            </div>
+            <div class="panel panel-default" ng-show="panel.isSelected(2)">				  
+              <div class="panel-body">
+                {{ product.specification }}
+              </div>
+            </div>
+            <div class="panel panel-default" ng-show="panel.isSelected(3)">				  
+              <div class="panel-body">
+
+                <blockquote ng-repeat="review in product.reviews">
+                  <b>Рейтинг: {{ review.stars }}</b>
+                  {{ review.body }}
+                  <cite>- {{ review.author }}</cite>
+                </blockquote>
+
+                <review-form></review-form>
+
+              </div>
+            </div>
+            
+            <!-- Button for purchasing a product is inserted inside -->
+            <div class="sales-controls" button-bucket></div>		
+
+          </section>
+					
+		    </div> <!-- end div.thumbnail -->
+		  </div> <!-- end div.col-sm-6.col-md-6.col-md-offset-3 -->
+		</div> <!-- end div.row -->
+	</div> <!-- end div.container-fluid -->
+</body>
+</html>

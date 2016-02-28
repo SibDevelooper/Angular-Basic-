@@ -1,0 +1,12 @@
+<form name="reviewForm" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+  <blockquote>
+    <b>Рейтинг: {{ reviewCtrl.review.stars }}</b>
+    {{ reviewCtrl.review.body }}
+    <cite>- {{ reviewCtrl.review.author }}</cite>
+  </blockquote>	
+  <!-- Custom element directive	-->
+  <select-star></select-star>															
+  <textarea ng-model="reviewCtrl.review.body" placeholder="Напишите свой отзыв" required></textarea>
+  <input ng-model="reviewCtrl.review.author" type="email" placeholder="author@yahoo.com" required>
+  <button type="submit" class="btn btn-default">Отправить</button>
+</form>

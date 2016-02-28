@@ -1,0 +1,22 @@
+{
+  "name": "Angular-Basic-",
+  "authors": [
+    "realAbstractionist <justforsignup@mail.ru>"
+  ],
+  "description": "Simple Angular app to learn the basics",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-i18n": "~1.4.8",
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "normalize-css": "normalize.css#~3.0.3",
+    "less": "~2.5.3"
+  }
+}

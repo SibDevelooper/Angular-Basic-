@@ -1,0 +1,117 @@
+@brand-primary: #dd5d6c;
+
+.btn-primary {
+	background-color: @brand-primary;	
+	border: 1px solid darken(@brand-primary, 5%);
+	outline: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active:focus {
+	background-color: lighten(@brand-primary, 10%);	
+	border: 1px solid lighten(@brand-primary, 5%);
+	outline: none;
+}
+
+.thumbnail {
+	border-radius: 0;	
+}
+
+a.thumbnail {
+	margin-top: 7px;
+	padding: 0;
+	border: 0;
+}
+
+.panel {
+	border-radius: 0;	
+}
+
+.btn {
+	border-radius: 3px;	
+}
+
+.sales-controls {
+	text-align: right;
+	
+	.btn-bucket {
+		margin: 0px 10px 10px;
+		
+		.badge {
+			color: #000;
+		}
+	}
+}
+
+.nav-pills>li>a {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.page-header h1 {
+	font-size: 5rem;
+	text-align: center;
+}
+
+cite {
+	display: block;
+}
+
+form {
+	max-width: 40%;
+	box-shadow: none;
+	
+	select {
+		display: block;
+		width: 100%;
+		height: 30px;
+		margin: 10px 0;		
+		
+		border-radius: 3px;
+		border: 1px solid rgb(204, 204, 204);
+	}
+	
+	option:hover:focus:active {
+		padding: 5px 10px;
+		background: rgba(0,0,0,0.3);
+	}
+	
+	textarea {
+		display: block;
+		width: 100%;
+		height: 100px;
+		margin: 10px 0;
+		padding: 10px;		
+
+		border-radius: 3px;
+		border: 1px solid rgb(204, 204, 204);
+	}
+	
+	input {
+		display: block;
+		width: 100%;
+	  height: 30px;
+		margin: 10px 0;
+		padding: 10px;		
+		
+		border-radius: 3px;
+		border: 1px solid rgb(204, 204, 204);
+	}
+	
+	.btn {
+		float: right;
+	}
+  
+  :focus {
+    outline: none;
+  }
+  
+  .ng-dirty.ng-invalid {
+    border-color: #fa787e;
+  }
+  
+  .ng-dirty.ng-valid {
+    border-color: #78fa89;
+  }
+}

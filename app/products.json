@@ -1,0 +1,109 @@
+[
+		{
+			name: "Лампа Ламповая",
+			price: 1290,
+			description: "Все ламповые вечеринки делаются этой лампой.",
+			specification: "Бревнишко и лампа накаливание ватт на 90.",
+			images: [
+				{
+					full: "img/lamps.jpg",
+					index: 0
+				},
+				{
+					full: "img/lamp3.jpg",
+					index: 1
+				},
+				{
+					full: "img/lamp2.jpg",
+					index: 2
+				}
+			],
+			reviews: [
+				{
+					stars: 5,
+					body: "Супер деревяха! Твори еще!",
+					author: 'joe@thomas.com'
+				},
+				{
+					stars: 2,
+					body: 'Такие деревяшки только для нищебродов',
+					author: 'hatersgonnahate@rambler.ru'
+				}
+				
+			]
+		},
+		{
+			name: "Кольцо",
+			price: 800,
+			description: "Особенность этих колец в том, что они сделаны из сломанных скейтбордов.",
+			specification: "Материал: пятислойная фанера, сибирская береза.",
+			images: [
+				{
+					full: "img/rings.jpg",
+					index: 0
+				},
+				{
+					full: "img/ring1.jpg",
+					index: 1
+				},
+				{
+					full: "img/ring2.jpg",
+					index: 2
+				},
+				{
+					full: "img/ring3.jpg",
+					index: 3
+				}
+			],
+			reviews: [
+				{
+					stars: 5,
+					body: "Супер деревяха! Твори еще!",
+					author: 'joe@thomas.com'
+				},
+				{
+					stars: 2,
+					body: 'Такие деревяшки только для нищебродов',
+					author: 'hatersgonnahate@rambler.ru'
+				}
+				
+			]
+		},
+		{
+			name: 'Блокнот "Конструктор"',
+			price: 500,
+			description: "Уникальный экземпляр. Вы всегда можете заказать свой текст на первой странице блокнота.",
+			specification: "Материал: экологичный картон",
+			images: [
+				{
+					full: "img/notebooks.jpg",
+					index: 0
+				},
+				{
+					full: "img/notebook1.jpg",
+					index: 1
+				},
+				{
+					full: "img/notebook2.jpg",
+					index: 2
+				},
+				{
+					full: "img/notebook3.jpg",
+					index: 3
+				}
+			],
+			reviews: [
+				{
+					stars: 5,
+					body: "Супер деревяха! Твори еще!",
+					author: 'joe@thomas.com'
+				},
+				{
+					stars: 2,
+					body: 'Такие деревяшки только для нищебродов',
+					author: 'hatersgonnahate@rambler.ru'
+				}
+				
+			]
+		}
+	];
